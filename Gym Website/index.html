@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shibham Fitness Studio</title>
+</head>
+<link href="https://fonts.google.com/specimen/Baloo+Bhai+2?query=baloo+Bhai" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+    /*CSS Reset*/
+    body{
+        font-family: 'Baloo Bhai 2',cursive;
+        color: white;
+        margin:0px;
+        padding:0px;
+        background: url('img/gym.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .left{
+        display: inline-block;
+        /*border:2px solid grey;*/
+        position:absolute;
+        left:60px;
+        top:20px;    
+    }
+
+    .left img{
+        width:150px;
+    }
+
+    .left div{
+        text-align:center;
+    }
+
+    .mid{
+        display:block;
+        width:52%;
+        margin:30px auto;
+        /*border:2px solid royalblue;*/
+    }
+
+    .right{
+        position:absolute;
+        right:34px;
+        top:48px;
+        display:inline-block;
+        /*border:2px solid violet;*/
+    }
+
+    .navbar{
+        display:inline-block;
+    }
+
+    .navbar li{
+        display:inline-block;
+        font-size:20px;
+    }
+
+    .navbar li a{
+        color:white;
+        text-decoration:none;
+        padding:34px 22px;
+    }
+
+    .navbar li a:hover, .navbar li a.active{
+        text-decoration: underline;
+        color:rgb(255, 4, 4);
+    }
+
+    .btn{
+        font-family: 'Baloo Bhai 2',cursive;
+        margin:0px 10px;
+        background-color: black;
+        color:white;
+        padding: 5px 15px;
+        border:2px solid orangered;
+        border-radius:12px;
+        font-size:12px;
+        cursor: pointer;
+    }
+
+    .btn:hover{
+        background-color:rgb(31, 30, 30);
+    }
+
+    .container{
+        /*border:2px solid white;*/
+        margin:106px 85px;
+        padding:80px;
+        width:33%;
+        border-radius: 28px;
+    }
+
+    .form-group input{
+        font-family: 'Baloo Bhai 2',cursive;
+        text-align:center;
+        display:block;
+        width:508px;
+        padding:2px;
+        border:2px solid black;
+        margin:11px auto;
+        font-size:25px;
+        border-radius:8px;
+    }
+
+    .container h1{
+        text-align:center;
+        display:block;
+        width:508px;
+        padding:2px;
+        margin:11px auto;
+        font-size:40px;
+        
+    }
+
+    .container h2{
+        text-align:center;
+        display:block;
+        width:508px;
+        padding:2px;
+        margin:11px auto;
+        font-size:25px;
+    }
+
+    .container h3{
+        text-align:center;
+        display:block;
+        width:508px;
+        padding:2px;
+        border:2px solid black;
+        margin:11px auto;
+        font-size:25px;
+    }
+
+    .container button{
+        display:block;
+        width:23%;
+        margin:auto;
+
+    }
+
+</style>
+<body>
+    <header class="header">
+
+        <!--left box for logo-->
+        <div class="left">
+            <img src="img/logo3.png"alt="">
+            <div>SHIBHAM FITNESS STUDIO</div>
+        </div>
+
+        <!--mid box for navbar-->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CLASSES</a></li>
+                <li><a href="#">PAGES</a></li>
+                <li><a href="#">FITNESS CALCULATOR</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+        </div>
+
+        <!--right box for buttons-->
+        <div class="right">
+            <button class="btn">CALL US NOW</button>
+            <button class="btn">EMAIL US</button>
+            <button class="btn">SEARCH</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>SHAPE YOUR BODY</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>To be a champ you have to believe in yourself when no one else will.</h2>
+        <br>
+        <br>
+        <br>
+        <h3>JOIN THE BEST GYM IN WEST BENGAL</h3>
+        <form action="noaction.php">
+            <br>
+            <div class="form-group">
+                <input type="text" name=""placeholder="ENTER YOUR NAME:">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name=""placeholder="ENTER YOUR AGE:">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name=""placeholder="ENTER YOUR GENDER:">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name=""placeholder="ENTER YOUR MOBILE NUMBER:">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name=""placeholder="ENTER YOUR EMAIL ADDRESS:">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name=""placeholder="ENTER YOUR ADDRESS:">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name=""placeholder="ENTER YOUR BLOOD GROUP:">
+            </div>
+            <br>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
