@@ -1,0 +1,51 @@
+body,
+*,
+:after,
+:before {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-image: url("./background.jpg");
+}
+
+section {
+  border: solid 1px red;
+  text-align: center;
+  margin: auto;
+  padding: 22.7rem 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+button {
+  margin: 0.5rem;
+  border: solid 4px black;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 5rem;
+  height: 4rem;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+button:active, .playing {
+  border: solid 4px #dfbd2ff7;
+}
+
+span {
+  display: block;
+  margin-top: 0.5rem;
+  color: #dfbd2ff7;
+  width: 5rem;
+  text-align: center;
+  font-size: 0.6rem;
+}
