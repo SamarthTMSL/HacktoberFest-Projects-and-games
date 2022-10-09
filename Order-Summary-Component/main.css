@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500:700:900&display=swap");
+
+:root{
+
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 75%, 52%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--pale-blue);
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
+
+}
+
+.card{
+
+    width: 450px;
+    background-color: white;
+    border-radius: 20px;
+    color: var(--desaturated-blue);
+    overflow: hidden;
+    margin: 50px auto;
+
+}
+
+.tittle{
+
+    color: var(--dark-blue);
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.hero-image{
+
+    width: 100%;
+}
+
+.container{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    
+}
+/* this below  use to set for all element Properities which present inside this container */
+
+.container> *{
+
+    margin: 13px 0;
+}
+
+
+.order-desc{
+
+line-height: 25px;
+}
+
+.plan-container{
+
+    font-size: 16px;
+    background-color: var(--pale-blue);
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan-container a{
+
+    color: var(--bright-blue);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.plan-container :hover{
+
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.plan-container strong{
+
+    color: var(--dark-blue);
+}
+
+.plan-description{
+
+    line-height: 20px;
+    margin-right: 75px ;
+
+}
+
+/* This below button style describe that [ btn-1, btn-2] both have these common propertiese */
+
+button{
+   
+    width: 100%;
+    border: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.btn-1{
+
+    background-color: var(--bright-blue);
+    padding: 1rem 0;
+    color: white;
+    box-shadow: 0 20px 30px -8px rgb(197, 189, 245);
+}
+
+.btn-1{
+
+    opacity: 0.9;
+}
+
+.btn-2{
+
+    background-color: white;
+    color: var(--desaturated-blue);
+    margin-top: 15px;
+
+}
+
+.btn-2 :hover{
+
+    color: red;
+    
+}
