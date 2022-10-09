@@ -54,6 +54,27 @@ button{
     margin-bottom: 30px;
     outline: none;
 }
+
+.container #hint{
+    color: blue;
+    cursor: pointer;
+}
+
+.container #hintbox{
+    display: none;
+}
+
 p{
     font-weight: 400;
+    border: 1px solid black;
+    width:inherit;
+    text-align: center;
+    margin: 2px 0;
+    color: white;
+    background-color: rgb(112 32 4);
+    border-radius: 4px;
+}
+
+#message3{
+    display: none;
 }
