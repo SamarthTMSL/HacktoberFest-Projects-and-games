@@ -1,0 +1,152 @@
+body {
+    font-family: 'Baloo Bhai 2', cursive;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    background: url('img/image.jpg') center center/cover;
+}
+
+
+.left {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 60px;
+    top: 20px;
+}
+
+.left img {
+    width: 100px;
+    margin: auto;
+}
+
+.left div {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.mid {
+    display: block;
+    width: 55%;
+    margin: 40px auto;
+}
+
+.right {
+    position: absolute;
+    right: 34px;
+    top: 48px;
+    display: inline-block;
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.navbar li a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 10px 22px;
+    margin: 5px 5px;
+}
+
+.navbar li a:hover {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.6s;
+    color: black;
+}
+
+.btn {
+    font-family: 'Baloo Bhai 2', cursive;
+    margin: 0px 10px;
+    font-size: 0.5rem;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    padding: 6px 15px;
+    border: 2px solid black;
+    border-radius: 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.9s;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+section {
+    display: flex;
+    height: 100vh;
+}
+
+.slogan {
+    width: 40%;
+    height: 30%;
+    position: absolute;
+    top: 35rem;
+    right: 1rem;
+    margin: 0px;
+}
+
+.slogan h1 {
+    font-size: 4rem;
+
+}
+
+.slogan span {
+    color: red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    height: 55vh;
+    width: 30%;
+
+}
+
+.container h2 {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+form {
+    width: 80%;
+}
+
+input::placeholder {
+    font-size: 1.2rem;
+}
+
+.form-group input {
+    font-family: 'Baloo Bhai 2', cursive;
+    text-align: center;
+    display: block;
+    width: 80%;
+    padding: 2px;
+    border: 2px solid black;
+    margin: 1px auto;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+.container button {
+    display: block;
+    background-color: greenyellow;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 10px 0px;
+    margin: auto;
+
+}
