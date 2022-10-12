@@ -1,30 +1,55 @@
-#navbar{
-    flex-direction: column;
+#navbar {
+  flex-direction: column;
 }
-#navbar ul li a{
-    font-size: 13px;
-    padding: 0px 10px;
-    padding-bottom: 10px;
+#navbar ul li a {
+  font-size: 13px;
+  padding: 0px 10px;
+  padding-bottom: 10px;
 }
-#home{
-    height: 350px;
+#home {
+  height: 350px;
 }
-#home::before{
-    height: 460px;
+#home::before {
+  height: 460px;
 }
-#home p{
-    font-size: 13px;
+#home p {
+  font-size: 13px;
 }
-#services{
-    flex-direction: column;
+#services {
+  flex-direction: column;
 }
-#client-section{
-    overflow: hidden;
+#client-section {
+  overflow: hidden;
 }
-.h-primary{
-    font-size: 20px;
+.h-primary {
+  font-size: 20px;
 }
-.btn{
-    font-size:13px;
-    padding: 2px;
+.btn {
+  font-size: 13px;
+  padding: 2px;
+}
+
+footer {
+  bottom: unset;
+}
+footer h1 {
+  font-size: 28px;
+}
+footer .social {
+  margin-top: 20px;
+}
+footer .social .fa-brands {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+footer .colr:nth-child(2),
+.colr:nth-child(3) {
+  flex-basis: 100%;
+}
+footer .col {
+  flex-basis: 100%;
 }
