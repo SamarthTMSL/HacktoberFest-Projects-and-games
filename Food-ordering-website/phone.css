@@ -28,3 +28,31 @@
     font-size:13px;
     padding: 2px;
 }
+
+/* Footer */
+
+footer {
+    bottom: unset;
+  }
+  footer h1 {
+    font-size: 28px;
+  }
+  footer .social {
+    margin-top: 20px;
+  }
+  footer .social .fa-brands {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    margin-right: 5px;
+    margin-top: 3px;
+  }
+  footer .colr:nth-child(2),
+  .colr:nth-child(3) {
+    flex-basis: 100%;
+  }
+  footer .col {
+    flex-basis: 100%;
+  }
+  

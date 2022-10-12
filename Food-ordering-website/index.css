@@ -19,6 +19,7 @@ html{
     position: sticky;
     align-items: center;
     top: 0px;
+    z-index: 1;
 }
 #navbar::before{
     content: "";
@@ -152,7 +153,7 @@ html{
     justify-content: center;
 }
 .client-items img{
-    width: 118px;
+    width: 218px;
     padding: 32px 52px;
     border-radius:30%;
 }
@@ -176,12 +177,12 @@ html{
 #contact{
     position: relative;
 }
-footer{
+/* footer{
     padding: 20px;
     background-color: rgb(32, 32, 32);
     opacity: 90%;
     color: white;
-}
+} */
 #contact ::before{
 
     content: "";
@@ -212,7 +213,7 @@ footer{
 .form-group{
     padding-top: 20px ;
 }
-label{
+#contact label{
     font-family: 'Bree Serif', serif;
     font-weight: bolder;
 }
@@ -233,4 +234,386 @@ label{
 legend{
     text-align: center;
     font-family: 'Bree Serif', serif;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  color: white;
+  padding: 50px 0 30px;
+  font-size: 13px;
+  line-height: 20px;
+  font-family: sans-serif;
+}
+footer h1 {
+  font-family: "Bree Serif", serif;
+  font-size: 32px;
+  height: 50px;
+}
+.underline {
+  width: 100%;
+  background: #485461;
+  height: 5px;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+.underline span {
+  width: 15px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  background: white;
+  animation: moving 2s linear infinite;
+}
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+footer .row {
+  width: 86%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-bottom: 12px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer .col {
+  flex-basis: 33%;
+  padding: 10px;
+}
+footer .col h3 {
+  color: white;
+  width: fit-content;
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: -6px;
+  margin-bottom: 40px;
+}
+footer .colr:nth-child(2) {
+  flex-basis: 15%;
+}
+footer .email {
+  width: fit-content;
+  margin: 20px 0;
+}
+
+footer form {
+  position: relative;
+  display: flex;
+  padding-bottom: 13px;
+  align-items: center;
+  border-bottom: 1px solid rgb(218, 98, 98);
+  justify-content: space-between;
+  transition: border-bottom 0.3s ease-in-out;
+}
+footer form ::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  transition: width 0.4s ease-in-out;
+}
+footer form :hover::after {
+  width: 100%;
+}
+footer form .fa-envelope {
+  font-size: 17px;
+  margin-right: 10px;
+}
+footer form input {
+  width: 100%;
+  background: transparent;
+  color: white;
+  border: 0;
+  outline: none;
+}
+footer form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+footer form button .fa-arrow-right {
+  font-size: 15px;
+  color: white;
+}
+footer .social {
+  margin-top: 30px;
+}
+footer .social .fa-brands {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #485461;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.feedback-btn {
+  background-color: green;
+  border: solid green 1px;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 10px;
+  opacity: 0.8;
+  padding: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.feedback-btn:hover {
+  box-shadow: 0 0 5px white;
+}
+
+
+/* Cards Section */
+
+
+.themes-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  font-size: 1.5rem;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.cards {
+  display: flex;
+  position: relative;
+  flex-flow: row wrap;
+  justify-content: center;
+  font-family: "Bree Serif", serif;
+  margin: 10px;
+  width: 90%;
+  height: 350px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+  /* z-index: 1; */
+  box-shadow: 50px #63f5bd;
+}
+
+.flip-card .front,
+.flip-card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  text-align: center;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  border: 2px solid red;
+  background-color: rgb(250, 239, 237);
+  box-shadow: 5px 10px 20px rgba(240, 23, 23, 0.19),
+    5px 6px 6px rgba(219, 56, 56, 0.23);
+}
+
+.flip-card .back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  background-color: rgb(250, 239, 237);
+  box-shadow: 5px 10px 20px rgba(240, 23, 23, 0.19),
+    5px 6px 6px rgba(219, 56, 56, 0.23);
+}
+
+label:hover .flip-card {
+  transform: rotateY(-180deg);
+}
+label:focus .flip-card {
+  transform: rotateY(180deg);
+}
+
+.themes-section input {
+  display: none;
+}
+
+:checked + .flip-card {
+  transform: rotateY(-180deg);
+}
+label:focus :checked + .flip-card {
+  transform: rotateX(175deg);
+}
+
+.front img {
+  display: inline-block;
+  padding: 10px;
+  width: 250px;
+  height: 250px;
+  animation: 1s ease-in-out 1s bounceIn;
+}
+
+.front h1 {
+  font-size: 30px;
+  color: #000000;
+  margin: 0;
+}
+.front h2 {
+  font-size: 18px;
+  color: #4e699d;
+  margin: 12px 0 12px 0;
+}
+.front p,
+.back .click {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  padding-top: 10px;
+}
+
+.back h1 {
+  color: #424752;
+  margin: 30px 0 0 0;
+}
+
+.back hr {
+  background-color: #000;
+  width: 180px;
+  margin: 5px auto 3px auto;
+}
+.back p {
+  text-align: justify;
+  font-size: 17px;
+  width: 80%;
+}
+
+#tools-title {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 35px;
+  font-weight: 700;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  #services {
+    margin: 0;
+  }
+  .themes-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 0;
+  }
+
+  .cards {
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 10px;
+    width: 280px;
+    height: 350px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+
+  .flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+
+    transition: all 0.5s ease-in-out;
+  }
+
+  .flip-card .front,
+  .flip-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+    text-align: center;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+  .front .fa-brands {
+    color: orange;
+  }
+  .flip-card .back {
+    color: #000;
+  }
+  input[type="checkbox"]:checked + .flip-card {
+    transform: rotateY(0deg);
+  }
+
+  .front img {
+    display: inline-block;
+    width: 60%;
+    height: 50%;
+    margin: 50px 0 auto 0;
+    animation: 1s ease-in-out 1s bounceIn;
+  }
+  .front h1 {
+    font-size: 20px;
+    color: #000000;
+    margin: 0;
+  }
+  .front p,
+  .back .click {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 5px 0;
+    padding-top: 10px;
+  }
+
+  .back h1 {
+    color: #424752;
+    font-size: 20px;
+    margin: 30px 0 0 0;
+  }
+
+  .back p {
+    font-size: 14px;
+  }
+
+  .back hr {
+    width: 180px;
+    margin: 5px auto 3px auto;
+    display: inline-block;
+  }
+  .back ul {
+    font-size: 1px;
+  }
+  .back li {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+    padding: 0 5px 0 5px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
