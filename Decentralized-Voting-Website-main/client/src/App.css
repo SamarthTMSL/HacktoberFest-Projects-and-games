@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: FreeMono, monospace, Tahoma, sans-serif;
+  /* background-color:rgb(197, 195, 62); */
+}
+
+body
+{
+  background:linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("Logos/bg.jpg");
+  /* background-size: contain; */
+  /* background-repeat: no-repeat; */
+  background-size: 1300px 1000px;
+  /* backdrop-filter: blur(2px); */
+
+}
+
+h1 {
+  text-align: center;
+}
+
+code {
+  font-family: SFMono-Regular, Copperplate, "Liberation Mono", Menlo, monospace;
+  background-color:rgb(43, 8, 243);
+  padding: 2px;
+  font-size: 105%;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+.container-main {
+  background-color: none;
+  padding: 1%;
+  margin: 11px;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  overflow: auto;
+}
+
+.container-item {
+  transition: ease all 0.5s;
+  background-color: #a9c25d;
+  border-radius: 7px;
+  width: 977px;
+  padding: 17px;
+  margin: 17px auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: auto;
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.container-list {
+  width: 100%;
+  padding: 11px;
+  margin: 3px auto;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  overflow: auto;
+}
+.center-items {
+  display: grid;
+  place-items: center;
+}
+
+@media all and (max-width: 1020px) {
+  .container-item {
+    width: 777px;
+  }
+}
+@media all and (max-width: 900px) {
+  .container-item {
+    width: 800px;
+    display: block;
+  }
+}
+@media all and (max-width: 850px) {
+  .container-item {
+    width: 700px;
+  }
+}
+@media all and (max-width: 750px) {
+  .container-item {
+    width: 600px;
+  }
+}
+@media all and (max-width: 650px) {
+  .container-item {
+    width: 400px;
+  }
+}
+@media all and (max-width: 400px) {
+  .container-item {
+    width: 300px;
+  }
+}
+
+.info,
+.attention,
+.alert,
+.success {
+  border: 1px solid black;
+  margin-top: 11px;
+  margin-bottom: 11px px;
+}
+.info {
+  background-color: #f6c543;
+}
+.attention {
+  background-color: #f6c543;
+}
+.success {
+  background-color: #f6c543;
+}
