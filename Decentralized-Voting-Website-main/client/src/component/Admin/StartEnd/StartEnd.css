@@ -1,0 +1,9 @@
+.start-btn {
+  display: block;
+  padding: 21px;
+  margin: 7px;
+  min-width: max-content;
+  text-align: center;
+  width: 333px;
+  align-self: center;
+}

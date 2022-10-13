@@ -1,0 +1,12 @@
+.btn-verification {
+  padding: 11px;
+  width: 100%;
+  margin-top: 11px;
+  margin-bottom: 11px;
+  float: inline-end;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(1, 10, 14);
+}
