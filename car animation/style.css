@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.sky{
+    height: 100vh;
+    width: 100%;
+    background-image: url(background.jpg);
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.trees{
+    height: 100vh;
+    width: 100%;
+    background-image: url(trees.png);
+    background-size: cover;
+    position: absolute;
+}
+
+.track{
+    height: 60vh;
+    width: 100%;
+    background-image: url(track.png);
+    background-size: cover;
+    position: absolute;
+    top: 73vh;
+
+}
+.car{
+    height: 100px;
+    width: 380px;
+    background-image: url(car_body.png);
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 444px;
+    bottom:0;
+}
+.wheel1{
+     width: 77px;
+     position: absolute;
+     left: 430px;
+     bottom: 0;
+}
+.wheel2{
+    width: 77px;
+    position: relative;
+    top: 44px;
+    left: 43px;
+}
