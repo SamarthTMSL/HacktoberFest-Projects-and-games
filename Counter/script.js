@@ -20,7 +20,7 @@ dec.addEventListener("click",function(){
         num.style.color = "white";
     }
     if(n<0){
-        num.style.color = "red";
+        num.style.color = "yellow";
     }
 });
 res.addEventListener("click",function(){
