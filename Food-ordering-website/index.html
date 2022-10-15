@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyOnlineMeals.com</title>
+    <title>MyOnlineMeals.com</title><script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/91052885a4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" media= "screen and (max-width: 1200px)" href="phone.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
@@ -23,7 +24,7 @@
             <ul>
                 <li class="item"><a href="#home">Home</a></li>
                 <li class="item"><a href="#services-container">Services</a></li>
-                <li class="item"><a href="#client-section">About Us</a></li>
+                <li class="item"><a href="#client-section">Our Clients</a></li>
                 <li class="item"><a href="#contact">Contact Us</a></li>
             </ul>
         </div>
@@ -39,26 +40,65 @@
     <section id="services-container">
         <h1 class="h-primary">Our Services</h1>
         <div id="services">
-            <div class="box">
-                <img src="./images/bulkbox.jpeg" alt="">
-                <h2 class="h-secondary">Food Catering</h2>
-                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et qui, repudiandae similique nam,
-                    recusandae quidem ab asperiores ex, aut fugit labore veritatis facere?</p>
-            </div>
-            <div class="box">
-                <img src="./images/pizzabox.webp" alt="">
-                <h2 class="h-secondary">Bulk Ordering</h2>
-                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde laudantium a incidunt animi ad, ab
-                    dignissimos vero? Unde numquam odit repudiandae perferendis nisi.</p>
-            </div>
-            <div class="box">
-                <img src="./images/boxbike.webp" alt="">
-                <h2 class="h-secondary">Food Ordering</h2>
-                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus provident fugiat aliquam
-                    minima at explicabo. Earum eveniet quaerat, sunt molestias nesciunt quas! Quis.</p>
+            <div id="tools" class="tools w-[100%]">
+                <section id="themes-section" class="section themes-section">
+                    <label class="cards slideanim">
+                        <input type="checkbox" />
+                        <div class="flip-card">
+                            <div class="front">
+                                <img src="./images/bulkbox.jpeg" alt="" class="">
+                                <h1>Food Catering</h1>
+                                <p>Click for more info</p>
+                            </div>
+                            <div class="back">
+                                <h1>More Info</h1>
+                                <hr />
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum maiores dolorum
+                                    quibusdam ab quae dolorem velit! Eaque vitae molestiae incidunt accusantium
+                                    reiciendis earum eligendi, quae minima, perferendis beatae, dicta minus.
+                                </p>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="cards slideanim">
+                        <input type="checkbox" />
+                        <div class="flip-card">
+                            <div class="front">
+                                <img src="./images/pizzabox.webp" alt="">
+                                <h1>Bulk Order</h1>
+                                <p>Click for more info</p>
+                            </div>
+                            <div class="back">
+                                <h1>More Info</h1>
+                                <hr />
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sed,
+                                    perferendis omnis eos molestiae tempore dolorum pariatur ex similique, vitae nulla
+                                    fuga hic asperiores ad aspernatur sequi dolorem distinctio quas.
+                                </p>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="cards slideanim">
+                        <input type="checkbox" />
+                        <div class="flip-card">
+                            <div class="front">
+                                <img src="./images/boxbike.webp" alt="">
+                                <h1>Food Ordering</h1>
+                                <p>Click for more info</p>
+                            </div>
+                            <div class="back">
+                                <h1>More Info</h1>
+                                <hr />
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis placeat asperiores
+                                    dolorum nulla, non, corporis et quisquam dignissimos sed vel modi accusantium dicta
+                                    amet alias quae explicabo, quaerat ullam. Quaerat. </p>
+                            </div>
+                        </div>
+                    </label>
+                </section>
             </div>
         </div>
     </section>
@@ -66,20 +106,20 @@
         <h1 class="h-primary">Our Clients</h1>
         <div id="clients">
 
-            <div class="client-items">
-                <img src="./images/logo5.webp" alt="Our Clients">
+            <div class="client-items one">
+                <img src="./images/twitter.gif" alt="Our Clients">
             </div>
             <div class="client-items">
                 <img src="./images/logo3.jpeg" alt="Our Clients">
             </div>
             <div class="client-items">
-                <img src="./images/logo2.jpeg" alt="Our Clients">
+                <img src="./images/HP.png" alt="Our Clients">
             </div>
             <div class="client-items">
                 <img src="./images/logo4.webp" alt="Our Clients">
             </div>
             <div class="client-items">
-                <img src="./images/logo1.webp" alt="Our Clients">
+                <img src="./images/logonew.png" alt="Our Clients">
             </div>
         </div>
     </section>
@@ -110,9 +150,39 @@
     </section>
 
     <footer>
-        <div class="center">
-            Copyright &copy; www.MyOnlineMeals.com All Rights Reserved!
+        <div class="row">
+            <div class="col">
+                <h1>MyOnlineMeal</h1>
+                <p class="text-justify">About Section <br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, reprehenderit. Tempore,
+                    repudiandae totam! Consequuntur veritatis obcaecati quos ipsa, quis dolores deleniti doloremque
+                    illum voluptas nihil nulla nostrum minus autem voluptatum?
+                </p>
+            </div>
+            <div class="col">
+                <h3>
+                    Office
+                    <div class="underline"><span></span></div>
+                </h3>
+                <p class="w-[50%]">Address- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, odit.</p>
+            </div>
+            <div class="col">
+                <h3>
+                    Contact
+                    <div class="underline"><span></span></div>
+                </h3>
+                <form action="">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Enter Your Email-id" />
+                    <button><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <a href="feedback.html"><button class="feedback-btn">Feedback</button></a>
+            </div>
         </div>
+        <hr />
+        <p class="text-center">
+            Copyright &copy; www.MyOnlineMeals.com All Rights Reserved!
+        </p>
     </footer>
 
 </body>
