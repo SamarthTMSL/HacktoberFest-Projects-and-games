@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <article class="container">
+      <header class="header">
+        <span>T</span>
+        <span>I</span>
+        <span>C</span>
+
+        <span>T</span>
+        <span>A</span>
+        <span>C</span>
+
+        <span>T</span>
+        <span>O</span>
+        <span>E</span>
+      </header>
+      <section class="details">
+        <div class="input">
+          <label for="player1">PLAYER1 NAME</label>
+          <input id="player1" type="text" class="focus" />
+        </div>
+        <div class="input">
+          <label for="player2">PLAYER2 NAME</label>
+          <input id="player2" type="text" class="focus" />
+        </div>
+
+        <!-- <p>select board size :</p> -->
+        <div class="bd">
+          <select name="boardsize" id="boardsize" class="boardsize">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <button id="gamestart" onclick="startgame()" class="startgame">
+            Start Game
+          </button>
+        </div>
+      </section>
+      <section id="board-container" class="board">
+        <p id="turn" class="turn"></p>
+      </section>
+    </article>
+  </body>
+  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <script>
+    $("input").on("focusin", function () {
+      $(this).parent().find("label").addClass("active");
+    });
+
+    $("input").on("focusout", function () {
+      if (!this.value) {
+        $(this).parent().find("label").removeClass("active");
+      }
+    });
+  </script>
+</html>
