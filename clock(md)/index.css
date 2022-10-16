@@ -3,13 +3,21 @@
     margin: auto;
     height: 40vw;
     width: 40vw; 
+<<<<<<< HEAD
     background: url(clock.png) no-repeat;
+=======
+    background: url(ck.png) no-repeat;
+>>>>>>> dcc644b0cde1f6067121cebd3c38ca921b1be0a6
     background-size: 100%;
 }
 
 #hour, #minute, #second{
     position: absolute;
+<<<<<<< HEAD
     background: rgb(242, 255, 0);
+=======
+    background: rgb(0, 72, 255);
+>>>>>>> dcc644b0cde1f6067121cebd3c38ca921b1be0a6
     border-radius: 5px; 
     transform-origin: bottom;
 }
