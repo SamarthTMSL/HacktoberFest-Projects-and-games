@@ -1,0 +1,62 @@
+'''Simple small quiz game as a beginner with the use of 
+if-else statements for checking answers
+print statement for displaying output'''
+
+print('Welcome to Python Quiz Game')
+answer=input('Are you ready to play the Quiz ? (YES/NO) :')
+score=0
+total_questions=5
+ 
+if answer.upper()=='YES':
+    answer=input('Question 1: Who is the founder of Python?')
+    if answer.title()=='Guido Van Rossum':
+        score += 1
+        print('Correct')
+    else:
+        print('Wrong Answer :( try next time')
+ 
+ 
+    answer=input('''Question 2: When was python first released? 
+    a) 1 April,1990 
+    b) 20 February,1991
+    c) 25 January,1994 
+    d) 22 February,1993''')
+    if answer.title()=='20 February,1991':
+        score += 1
+        print('Correct')
+    else:
+        print('Wrong Answer :( try next time')
+ 
+    answer=input('Question 3: What is the latest version of Python 2022')
+    if answer.title()=='Python 3.9':
+        score += 1
+        print('Correct')
+    else:
+        print('Wrong Answer :( try next time')
+      
+    answer=input('''Question 4: Which type of Programming does Python support?
+a) object-oriented programming
+b) structured programming
+c) functional programming
+d) all of the above mentioned ?''')
+    if answer.lower()=='all of the above mentioned':
+        score += 1
+        print('Correct')
+    else:
+        print('Wrong Answer :( try next time')
+      
+    answer=input('''Question 5: What is the order of precedence in python?
+a) Exponential, Parentheses, Multiplication, Division, Addition, Subtraction
+b) Exponential, Parentheses, Division, Multiplication, Addition, Subtraction
+c) Parentheses, Exponential, Multiplication, Division, Subtraction, Addition
+d) Parentheses, Exponential, Multiplication, Division, Addition, Subtraction ''')
+    if answer.title()=='Parentheses, Exponential, Multiplication, Division, Addition, Subtraction':
+        score += 1
+        print('Correct')
+    else:
+        print('Wrong Answer :( try next time')
+      
+print(f'Thankyou for Playing this small quiz game, you attempted','your score is:{score}',"questions correctly!")
+percentage=(score/total_questions)*100
+print(f'Marks obtained:{percentage}%')
+print('BYE! THANK YOU')
