@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.maintable{
+    text-align: center;
+    margin-top: 10px;
+}
+#table{
+    margin: 5px auto;
+}
+table tr:not(:first-child):hover{
+    background-color: #ddd;
+}
+table{
+    width: 60%;
+    border-collapse: collapse;
+    text-align: center;
+}
+tr:nth-child(odd){
+    background-color: lightgrey;
+}
+.updatebtn{
+    text-align: center;
+}
+.updatebtn button{
+    background-color: red;
+    padding: 5px 10px;
+    border: 1px solid black;
+    color: white;
+    margin: 10px 0;
+    border-radius: 5px ;
+}
+.updatebtn button:hover{
+    background-color: lightgrey;
+    color: black;
+    transition: .5s;
+}
+.edittable{
+    display:none;
+    padding-top: 20px;
+    width: 30%;
+    margin: 0 auto;
+}
+.left{
+    float: left;
+}
+.right{
+    float:right;
+}
+.editrowbtn{
+    background-color: #0DC143;
+    color: white;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.editrowbtn:hover{
+    background-color: lightgrey;
+    color: black;
+    transition: .5s;
+
+}
+

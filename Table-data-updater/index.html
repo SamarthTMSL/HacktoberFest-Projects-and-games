@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML TABLE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="maintable">
+        <h1>Data</h1>
+        <table id="table" border="1">
+            <tr>
+                <th>Sno</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Country</th>
+                <th>Mobile</th>
+            </tr>
+    
+            <tr>
+                <td>01</td>
+                <td>Deepak</td>
+                <td>Puram</td>
+                <td>HYD</td>
+                <td>8328171661</td>
+    
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>Aakash</td>
+                <td>Boinapalli</td>
+                <td>HYD</td>
+                <td>832833232</td>
+    
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>tehith</td>
+                <td>taduka</td>
+                <td>HYD</td>
+                <td>9121645842</td>
+    
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>bhargavi</td>
+                <td>gaggalapally</td>
+                <td>HYD</td>
+                <td>9090897867</td>
+    
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>geon</td>
+                <td>hije</td>
+                <td>HYD</td>
+                <td>8776655443</td>
+    
+            </tr>            
+        </table>
+    </div>
+
+    <div class="updatebtn">
+        <button onclick="editTableDisplay()">Update Data</button>
+    </div>
+
+    <div class="edittable">
+        <div class="left">First Name:</div><div><input type="text" name="fname" id="fname"></div><br>
+        <div class="left">Last Name:</div><div><input type="text" name="lname" id="lname"></div><br>
+        <div class="left">Country:</div><div><input type="text" name="Country" id="Country"></div><br>
+        <div class="left">Mobile:</div><div><input type="text" name="number" id="Mobile"></div><br>
+        <button onclick="editRow()" class="editrowbtn">Update</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
