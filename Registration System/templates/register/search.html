@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>  
+        <style>
+            .searchDiv{
+                 padding: 10px;
+    margin: 10px;
+    
+    text-align: center;
+        
+            }
+            .search{
+                width: fit-content;
+    position: relative;
+    right: -78%;
+    
+            }
+            #name{
+                    border-radius: 30px;
+    padding: 5px;
+    margin: 5px;
+    filter: drop-shadow(2px 3px 1px gray);
+            }
+            #submitButton{
+                border-radius: 20px;
+    padding: 5px;
+    margin: 5px;
+    background: #0d85fe7d;
+            }
+            .table{
+                padding: 5px;
+                margin: 5px;
+            }
+        </style> 
+</head>
+
+<body>
+
+    
+    {% comment %} {% if data %}{% for value in data %} 
+    id:{{value.id}} name:{{value.name}} 
+   
+    <form action="/registerapp/update/" method="POST">
+        {% csrf_token %}
+     <input type="hidden" id="email" name='email' value="{{value.email}}">
+        <input type="hidden" id="name" name='name' value="{{value.name}}">
+        <input type="hidden" id="phone" name='phone' value="{{value.phone}}">
+
+        <input type="hidden" id="gender" name='gender' value="{{value.gender}}">
+        <input type="hidden" id="dob" name='dob' value="{{value.dob}}">
+        <input type="hidden" id="profession" name='profession' value="{{value.profession}}">
+        <input type="hidden" id="course" name='course' value="{{value.course}}">
+        <input type="hidden" id="id" name='id' value="{{value.id}}">
+        <input type="hidden" id="from" name='from' value="search">
+        <input type="Submit" value="update">
+    </form>
+    {% endfor %} {% endif %} {% endcomment %}
+        <div>
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="http://127.0.0.1:8000/registerapp/register/">Universal Informatics </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="http://127.0.0.1:8000/registerapp/register/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="http://127.0.0.1:8000/registerapp/search/">Search</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <button class="btn btn-outline-success" type="button"><a class="nav-link"
+                                    href="http://127.0.0.1:8000/registerapp/search/">Search</a></button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+   <h1 style="text-align:center">WELCOME TO TEAM REGISTRATION SYSTEM</h1>
+   <div>
+    <img  src="https://c0.wallpaperflare.com/preview/598/410/409/login-monitor-smartphone-tablet.jpg" alt="IMAGE" height="900px"/>
+   </div>
+<div>
+    <div class="searchDiv">
+        <div>
+            <h1>Search By Name</h1>
+        </div>
+<div class="search">
+    <form action="/registerapp/search/" method="POST">
+        {% csrf_token %}
+        <div>
+            <input type="text" id="name" placeholder="Search" name='name'>
+            <input type="Submit" id="submitButton" value="Search">
+        </div>
+    </form>
+</div>
+
+    </div>
+    <div style="padding: 5px; margin:5px;" >
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="http://127.0.0.1:8000/registerapp/register/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Search</li>
+            </ol>
+        </nav>
+    </div>
+    <table class="table">
+  <thead>
+    <tr class="table-dark">
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Date of Birth</th>
+      <th scope="col">Profession</th>
+      <th scope="col">Course</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Update</th>
+
+    </tr>
+  </thead>
+  <tbody>
+     {% if data %}{% for value in data %} 
+    <tr class="table-info">
+      <th scope="row">{{value.id}}</th>
+      <td>{{value.name}}</td>
+      <td>{{value.email}} </td>
+      <td>{{value.phone}}</td>
+      <td>{{value.gender}}</td>
+      <td>{{value.dob}}</td>
+      <td>{{value.profession}}</td>
+      <td>{{value.course}}</td>
+      <td>
+          <form action="/registerapp/search/" method="POST">
+        {% csrf_token %}
+        <input type="hidden" id="name" name='name' value="{{value.name}}">
+        <input type="hidden" id="id" name='id' value="{{value.id}}">
+        <input type="Submit" class="btn btn-primary" value="Delete">
+        <!-- <input type="hidden" id="id" name='id' value="{{value.id}}">
+        <input type="Submit" value="Delete"> -->
+    </form>
+      </td>
+      <td>
+        <form action="/registerapp/update/" method="POST">
+        {% csrf_token %}
+     <input type="hidden" id="email" name='email' value="{{value.email}}">
+        <input type="hidden" id="name" name='name' value="{{value.name}}">
+        <input type="hidden" id="phone" name='phone' value="{{value.phone}}">
+
+        <input type="hidden" id="gender" name='gender' value="{{value.gender}}">
+        <input type="hidden" id="dob" name='dob' value="{{value.dob}}">
+        <input type="hidden" id="profession" name='profession' value="{{value.profession}}">
+        <input type="hidden" id="course" name='course' value="{{value.course}}">
+        <input type="hidden" id="id" name='id' value="{{value.id}}">
+        <input type="hidden" id="from" name='from' value="search">
+        <input type="Submit" class="btn btn-primary" value="update">
+    </form>
+      </td>
+    </tr>
+      {% endfor %} {% endif %}
+  </tbody>
+</table>
+</div>
+</body>
+
+</html>
