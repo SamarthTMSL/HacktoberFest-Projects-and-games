@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Customer Stories</title>
+        <link rel="stylesheet" href="css/style testimonial.css">
+    </head>
+    <body>
+        <div class="frame">
+            <div class="heading">
+                <h1>Customer <span>Stories</span></h1>
+            </div>
+            <div class="container">
+                <div class="indicator">
+                    <span class="btn active"></span>
+                    <span class="btn"></span>
+                </div>
+                <div class="testimonial">
+                    <div class="slide-row" id="slide">
+                        <div class="slide-col">
+                            <div class="user-text">                
+                                <p>“Customex helps me be the person I was meant to ne.
+                                    An all-rounder, a teacher, and a superwoman!
+                                    Being with my family and working 24/7 doesn’t mean
+                                    I have to forget about my chores anymore.”
+                                </p>
+                                <h3>- Riya Javed</h3>
+                            </div>
+                            <div class="user-img">
+                                <img src="image/testimonials/1.png" alt="">
+                            </div>
+                        </div>
+            
+                        <div class="slide-col">
+                            <div class="user-text">
+                                <p>“Customex’s quick service helps me and my family
+                                    every hour of the day. Whether we need books or furniture,
+                                    Customex is our go to solution. If 24/7 customer support is 
+                                    also your priority, this is the place to be.”
+                                </p>
+                                <h3>- Boney</h3>
+                            </div>
+                            <div class="user-img">
+                                <img src="image/testimonials/2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var btn=document.getElementsByClassName("btn");
+            var slide=document.getElementById("slide");
+
+            btn[0].onclick=function() {
+                slide.style.transform="translatex(0px)";
+                for(i=0;i<2;i++){
+                    btn[i].classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+            btn[1].onclick=function() {
+                slide.style.transform="translatex(-800px)";
+                for(i=0;i<2;i++){
+                    btn[i].classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+        </script>
+    </body>
+</html>
