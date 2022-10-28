@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User-Menu</title>
+  
+  <link rel = "icon" type = "image/png" href = "Image2/Icon.png"> 
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="sidebar-top">
+      <span class="shrink-btn">
+        <i class='bx bx-chevron-left'></i>
+      </span>
+      <img src="Image2/Logo.png" class="logo" alt="">
+      <h2 style="font-family: Lucida Console, Courier New; font-size: 1.8rem; color:#f7cad3; text-shadow: 2px 2px 8px #5e0c39;" class="hide">Marry Me</h2>
+    </div>
+
+    <div class="search">
+      <i class='bx bx-search'></i>
+      <input type="text" class="hide" placeholder="Search Profile...">
+    </div>
+
+    <div class="sidebar-links">
+      <ul>
+        <div class="active-tab"></div>
+        <li class="tooltip-element"  data-tooltip="0">
+          <a href="#" class="active" data-active="0">
+            <div class="icon">
+              <i class='bx bx-home'></i>
+              <i class='bx bxs-home'></i>
+            </div>
+            <span class="link hide"><b>Home</b></span>
+          </a>
+        </li>
+        <li class="tooltip-element" data-tooltip="1">
+          <a href="News.html" data-active="1">
+            <div class="icon">
+              <i class='bx bx-file'></i>
+              <i class='bx bxs-file'></i>
+            </div>
+            <span class="link hide"><b>News</b></span>
+          </a>
+        </li>
+
+        <li class="tooltip-element" data-tooltip="2">
+          <a href="#" data-active="2">
+            <div class="icon">
+              <i class='bx bx-notification'></i>
+              <i class='bx bxs-notification'></i>
+            </div>
+            <span class="link hide">
+              <button>Notification</button>
+
+              <div class="alert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg">Alert: 5 Notifications!</span>
+                <div class="close-btn">
+                   <span class="fas fa-times"></span>
+                </div>
+             </div>
+             <script>
+                $('button').click(function(){
+                  $('.alert').removeClass("hide");
+                  $('.alert').addClass("show");
+                  $('.alert').addClass("showAlert");
+                  setTimeout(function(){
+                    $('.alert').removeClass("show");
+                    $('.alert').addClass("hide");
+                  },5000);
+                });
+                $('.close-btn').click(function(){
+                  $('.alert').addClass("hide");
+                  $('.alert').removeClass("show");
+                });
+             </script>
+
+            </b></span>
+          </a>
+        </li>
+        <li class="tooltip-element" data-tooltip="3">
+          <a href="Chat.html" data-active="3">
+            <div class="icon">
+              <i class='bx bx-message-square-detail'></i>
+              <i class='bx bxs-message-square-detail'></i>
+            </div>
+            <span class="link hide"><b>Chat</b></span>
+          </a>
+        </li>
+        <li class="tooltip-element" data-tooltip="4">
+          <a href="Feedback.html" data-active="4">
+            <div class="icon">
+              <i class='bx bx-smile'></i>
+              <i class='bx bxs-smile'></i>
+            </div>
+            <span class="link hide"><b>Feedback</b></span>
+          </a>
+        </li>
+        <div class="tooltip">
+          <span class="show"><b>Home</b></span>
+          <span><b>News</b></span>
+          <span><b>Notification</b></span>
+          <span><b>Chat</b></span>
+          <span><b>Feedback</b></span>
+        </div>
+      </ul>
+
+      <ul>
+        <li class="tooltip-element" data-tooltip="0">
+          <a href="Help.html" data-active="5">
+            <div class="icon">
+              <i class='bx bx-help-circle'></i>
+              <i class='bx bxs-help-circle'></i>
+            </div>
+            <span class="link hide"><b>Help</b></span>
+          </a>
+        </li>
+        <li class="tooltip-element" data-tooltip="1">
+          <a href="#" data-active="6">
+            <div class="icon">
+              <i class='bx bx-cog'></i>
+              <i class='bx bxs-cog'></i>
+            </div>
+            <span class="link hide"><b>Settings</b></span>
+          </a>
+        </li>
+        <li class="tooltip-element" data-tooltip="2">
+          <a href="Member.html" data-active="7">
+            <div class="icon">
+              <i class='bx bx-group'></i>
+              <i class='bx bxs-group'></i>
+            </div>
+            <span class="link hide"><b>Our Team</b></span>
+          </a>
+        </li>
+        
+        <div class="tooltip">
+          <span class="show"><b>Help</b></span>
+          <span><b>Settings</b></span>
+          <span><b>Our Team</b></span>
+        </div>
+      </ul>
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="Profile.html" class="account tooltip-element" data-tooltip="0">
+        <i class='bx bx-user'></i>
+      </a>
+      <div class="admin-user tooltip-element" data-tooltip="1">
+        <div class="admin-profile hide">
+          <a href="Profile.html">
+          <img src="Image2/Profile.png" alt="">
+          </a>
+          <div class="admin-info">
+            <a href = "Profile.html">
+            <h3>John Doe</h3>
+            <h4>User</h4>
+            </a>
+          </div>
+        </div>
+        <a href="index.html" class="log-out">
+          <i class='bx bx-log-out'></i>
+        </a>
+      </div>
+      <div class="tooltip">
+        <span class="show">John Doe</span>
+        <span>Logout</span>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+    <h1 style="font-family: Brush Script MT; font-size: 2.7rem; color:#4d0c34; text-shadow: 2px 2px 8px #5e0c39;">Matrimony Service with Millions of Success Storied</h1>
+    
+    <div class="slider">
+      <div class="slides">
+
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+
+        <div class="slide first">
+          <img src="Image2/1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="Image2/2.jpeg" alt="">
+        </div>
+        <div class="slide">
+          <img src="Image2/3.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="Image2/4.jpeg" alt="">
+        </div>
+
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+
+      </div>
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    var counter = 1;
+    setInterval(function(){
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 4){
+        counter = 1;
+      }
+    }, 5000);
+    </script>
+    <br>
+    
+  </main>
+
+  <script src="app2.js"></script>
+</body>
+
+</html>

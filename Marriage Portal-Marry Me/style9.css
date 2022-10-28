@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(25deg, #e7a7ca, #5e0c39);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.card-container {
+  position: relative;
+  color: #fff;
+  width: 440px;
+  height: 650px;
+  transform-style: preserve-3d;
+}
+
+.card-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem 3rem;
+  backface-visibility: hidden;
+  transition: 0.8s;
+  transform-style: preserve-3d;
+}
+
+.face-1 {
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  transform-origin: right;
+  transform: translate(0%) perspective(0px) rotateY(0deg);
+}
+
+.face-2 {
+  background-image: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  transform-origin: left;
+  transform: translateX(100%) perspective(1000px) rotateY(100deg);
+}
+
+.content:hover .face-1 {
+  transform: translate(-100%) perspective(1000px) rotateY(-100deg);
+}
+
+.content:hover .face-2 {
+  transform: translate(0%) perspective(0px) rotateY(0deg);
+}
+
+.logo {
+  width: 50px;
+  transform: translateZ(40px);
+  transform-style: preserve-3d;
+}
+
+.face-1 .top-part > h2 {
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 2px;
+  margin: 0.4rem 0 0.6rem;
+  transform: translateZ(50px);
+  transform-style: preserve-3d;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-new {
+  margin-right: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  background-color: #fff;
+  color: #80134f;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transform: translateZ(40px);
+  transform-style: preserve-3d;
+}
+
+.profile-year {
+  color: #eee;
+  font-size: 1.05rem;
+  transform: translateZ(40px);
+  transform-style: preserve-3d;
+}
+
+.bottom-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-price {
+  font-weight: 400;
+  font-size: 2.3rem;
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 0.95;
+  display: flex;
+  transform: translateZ(45px);
+  transform-style: preserve-3d;
+}
+
+.profile-price span {
+  font-size: 1.4rem;
+  margin-right: 0.2rem;
+}
+
+.right-arrow {
+  width: 35px;
+  padding-top: 0.3rem;
+  transform: translateZ(45px);
+  transform-style: preserve-3d;
+}
+
+.right-arrow img {
+  filter: invert(1);
+  animation: move 0.5s infinite ease alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-5px);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-top: 0.5rem;
+  transform: translateZ(35px);
+  transform-style: preserve-3d;
+}
+
+.wish {
+  color: #e26aac;
+  font-size: 1.4rem;
+  transform: translateZ(30px);
+  transform-style: preserve-3d;
+}
+
+.features {
+  list-style: none;
+  margin: 3rem 0;
+  color: #eee;
+  font-weight: 300;
+  transform: translateZ(40px);
+  transform-style: preserve-3d;
+}
+
+.features li {
+  margin-bottom: 0.3rem;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+}
+
+.face-1 .hide {
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.face-2 .hide {
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.content:hover .face-1 .hide {
+  opacity: 0;
+}
+
+.content:hover .face-2 .hide {
+  opacity: 1;
+}
+
+.profile-image-wrapper {
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.profile-img {
+  position: absolute;
+  width: 130%;
+  top: 110%;
+  left: 90%;
+  transform: translate(-45%, -55%) translateZ(200px);
+  transform-style: preserve-3d;
+  filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.2));
+  animation: float 2s alternate ease-in-out infinite;
+  transition: 0.65s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(calc(-45% - 5px)) translateY(calc(-55% - 5px))
+      translateZ(200px);
+  }
+
+  100% {
+    transform: translateX(calc(-45% + 5px)) translateY(calc(-55% + 5px))
+      translateZ(400px);
+  }
+}
+
+.profile {
+  transition: 0.6s;
+}
+
+.content:hover .profile-img {
+  width: 120%;
+  top: 147%;
+}
+
+@media (max-width: 550px) {
+  .content {
+    transform: scale(0.63);
+  }
+}
