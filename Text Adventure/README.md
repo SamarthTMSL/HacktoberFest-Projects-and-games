@@ -1,0 +1,2 @@
+# Text-Adventure
+The player is stuck in a time loop and must escape by choosing the correct path set by the one who trapped the player: Gifflet - A Troublemaker in Arthurian Legend.   There are different paths that open more such paths. At every level, the player would face a riddle that on which the correct answer, the player has an option to choose a path. Eventually, at last, the door opens to the player’s world or else to the world of death.
