@@ -1,0 +1,137 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Quiz Up</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="mainquizStyles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="element-animation1 quiz-container" id="quiz">
+        <div class="quiz-header">
+            <h2 id="question">Question Text</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label class='element-animation1' for="a" id="a_text">Answer</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label class="element-animation2" for="b" id="b_text">Answer</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label class="element-animation3" for="c" id="c_text">Answer</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label class="element-animation4" for="d" id="d_text">Answer</label>
+                </li>
+
+            </ul>
+            <div class="hint" style="display:none;" id="hint">HINT: He is Russian!!</div>
+        </div>
+
+        <button id="submit">Next</button>
+
+    </div>
+    <div class="firework" id="firework1" style="display: none;">
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+    </div>
+    <div class="firework" id="firework2" style="display: none;">
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+    </div>
+    <div class="firework" id="firework3" style="display: none;">
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+    </div>
+    <div class="firework" id="firework4" style="display: none;">
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+    </div>
+    <div class="firework" id="firework5" style="display: none;">
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+    </div>
+    <div class="firework" id="firework6" style="display: none;">
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+    </div>
+</body>
+<script src="mainquizScript.js"></script>
+
+</html>

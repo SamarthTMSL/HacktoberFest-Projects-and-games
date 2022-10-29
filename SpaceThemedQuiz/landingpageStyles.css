@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #212529;
+}
+
+a {
+    color: #eb5d1e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ef7f4d;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-primary {
+    font-family: "Raleway", sans-serif;
+}
+
+#hero {
+    width: 100%;
+    height: 70vh;
+    padding: 350px 100px;
+}
+
+#hero h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: white;
+}
+
+#hero h2 {
+    color: #f4efec;
+    margin: 15px 0 0 0;
+    font-size: 24px;
+}
+
+#hero .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+.landingButton {
+    margin-top: 20px;
+    padding: 5px;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 200px;
+    height: 50px;
+    line-height: 40px;
+    text-align: center;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    ;
+    border-radius: 5px;
+    background-size: 400%;
+    position: relative;
+}
+
+.landingButton:hover {
+    animation: buttonAnimation 8s linear infinite;
+}
+
+.landingButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 20px;
+    background: var(--gradient);
+    background-size: 400%;
+    opacity: 0;
+    transition: .4s;
+}
+
+.landingButton:hover::before {
+    opacity: 1;
+    filter: blur(20px);
+    animation: buttonAnimation 8s linear infinite;
+}
+
+@media (max-width: 991px) {
+    #hero {
+        height: calc(100vh - 72px);
+    }
+    #hero .animated {
+        -webkit-animation: none;
+        animation: none;
+    }
+    #hero .hero-img {
+        text-align: center;
+    }
+    #hero .hero-img img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    #hero .hero-img img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 575px) {
+    #hero .hero-img img {
+        width: 80%;
+    }
+}
+
+@media (max-height: 600px) {
+    #hero {
+        height: 120vh;
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes buttonAnimation {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: 400%;
+    }
+}
