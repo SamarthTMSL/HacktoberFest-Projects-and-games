@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <!--background:#7db919;-->
+<head>
+   <title>Tip Calculator</title>
+ </head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        
+    }
+    .topmost{
+        margin-left: 400px;
+    }
+    #top{
+    
+        margin-left: 5px;
+        width: 350px;
+        border: 4px black solid;
+        
+    }
+    #Tip{
+        
+        width: 300px;
+        border:25px saddlebrown solid; 
+        margin-left: 0px;
+         
+    }
+    #second{
+        margin-left: 0px;
+        margin-top:px; 
+        width: 343px;
+        border: 5px black solid;
+    }
+    .billamount{
+        font-size: 20px;
+    }
+    #select{
+        font-size: 30px;
+    }
+    #btn{
+        font-size: 20px;
+        background-color: red;
+        border:6px red solid; 
+    }
+    </style>    
+   
+
+<body>
+    <div class="topmost">
+        <div id="top" >
+    <form id="tipform">
+        <div id="Tip"><h1 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tip calculator</h1></div>
+       <p> <div id="second">
+        <p>&nbsp;&nbsp;How much was your bill?</p>
+        <p>&nbsp;&nbsp;Rs.<input  id="input" class="billamount" type="number" placeholder="Bill Amount"> </p>
+        <p>&nbsp;&nbsp;How was your service?</p>
+        <p> 
+          &nbsp;  <select id="select">
+            
+        
+                    <option disabled selected value="0">--Select Option-- </option>
+                    <option> 15% Outstanding </option>
+                    <option> 10% Good </option>
+                    <option> 5% Its OK</option>
+            </select>
+        </p>
+        <p>&nbsp;&nbsp;How many people sharing the bill?</p>
+        <p>&nbsp;&nbsp;<input id="people" class="billamount" type="number" placeholder="Bill Amount">&nbsp;People </p>
+           
+       
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button id="btn"><b>Calculator</b></button>
+        <p>    </p>
+        </div>
+        
+    </form>
+    </div>
+  </div>
+    
+    
+    
+    
+    
+<script>
+    
+    var x=document.getElementById('input').value;
+    var z=document.getElementById('people').value;
+    var y=document.getElementById('select').value;
+    if(y==15% Outstanding)
+        {
+            document.getElementById(btn).onclick=function{
+                var w=x*.15*z;
+              document.getElementById('text').innerHTML= w; 
+            }
+        }
+    else if(y==10% Good)
+        {
+            
+            document.getElementById(btn).onclick=function{
+                var a=x*.10*z;
+               document.getElementById('text').innerHTML= w; 
+          
+        }
+    else{
+        
+            document.getElementById(btn).onclick=function{
+                var a=x*.05*z;
+           document.getElementById('text').innerHTML= w; 
+              
+    }
+        
+</script>    
+        
+    </body>
+
+</html>
