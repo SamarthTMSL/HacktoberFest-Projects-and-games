@@ -1,0 +1,60 @@
+#Simple project to translate text from one language to any other language by using using the Tkinter, googletrans libraries.
+
+%pip install tkinter
+%pip install googletrans
+from tkinter import * 
+from tkinter import ttk
+from googletrans import Translator,LANGUAGES
+
+def Convert():
+    trans = Translator()
+    translated=trans.translate(text= source_text.get(1.0, END) , src = combo_source.get(), dest = combo_dest.get())
+    dest_text.delete(1.0, END)
+    dest_text.insert(END, translated.text)
+
+window= Tk() 
+#Tk() initialized tkinter which means window created
+window.title("Translator")
+window.geometry("500x900")
+window.configure(bg="Light Yellow")
+
+label_text =Label(window, text="Translate Now",font=("Times New Roman",35,"bold"),bg="Light Blue")
+label_text.place(x=120,y=20,height=40)
+
+label_text =Label(window, text="Enter Text",font=("Times New Roman",20,"bold"),fg="black",bg="Light Blue")
+label_text.place(x=30,y=80,height=40)
+
+source_text= Text(window,font=("Times New Roman",20,"bold"),wrap=WORD) 
+source_text.place(x=30,y=130,height=200,width=440)
+
+list_text=list(LANGUAGES.values())
+#loop to make the first letter of each value capital
+list1=[]
+for i in list_text:
+   a = i.title()
+   list1.append(a)
+
+combo_source = ttk.Combobox(window,value=list1) 
+'''Combobox is a combination of Listbox and an entry field. 
+It is one of the Tkinter widgets where it contains a down arrow to select from a list of options. '''
+
+combo_source.place(x=30,y=350,height= 30,width=130)
+combo_source.set('English')
+
+button_change=Button(window,text="Translate",bg = 'royal blue1', activebackground = 'sky blue',relief=RAISED,command=Convert)
+#command is called when we click the button
+
+button_change.place(x=180,y=350,height= 30,width=130)
+
+combo_dest = ttk.Combobox(window,value=list1) 
+combo_dest.place(x=330,y=350,height= 30,width=130)
+combo_dest.set('Hindi')
+
+label_text =Label(window, text="Translated Text",font=("Times New Roman",20,"bold"),fg="black",bg="Light Blue")
+label_text.place(x=30,y=400,height=40)
+
+dest_text= Text(window,font=("Times New Roman",20,"bold"),wrap=WORD)
+dest_text.place(x=30,y=450,height=200,width=440)
+
+
+window.mainloop()
